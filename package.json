@@ -1,6 +1,6 @@
 {
 	"name": "@navith/tailwindcss-plugin-author-types",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "Type definitions to make creating plugins for Tailwind CSS in TypeScript easier",
 	"keywords": [
 		"tailwindcss",
@@ -15,7 +15,7 @@
 	"bugs": "https://github.com/SirNavith/tailwindcss-plugin-author-types/issues",
 	"homepage": "https://github.com/SirNavith/tailwindcss-plugin-author-types",
 	"files": [
-		"dist/src/*"
+		"dist/*"
 	],
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
