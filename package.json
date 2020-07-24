@@ -1,0 +1,38 @@
+{
+	"name": "@navith/tailwindcss-plugin-author-types",
+	"version": "0.0.1",
+	"description": "Type definitions to make creating plugins for Tailwind CSS in TypeScript easier",
+	"keywords": [
+		"tailwindcss",
+		"typescript"
+	],
+	"author": "Navith <navithnavithnavith+git@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SirNavith/tailwindcss-plugin-author-types.git"
+	},
+	"bugs": "https://github.com/SirNavith/tailwindcss-plugin-author-types/issues",
+	"homepage": "https://github.com/SirNavith/tailwindcss-plugin-author-types",
+	"files": [
+		"dist/src/*"
+	],
+	"main": "dist/src/index.js",
+	"types": "dist/src/index.d.ts",
+	"scripts": {
+		"lint": "eslint --fix ./src/**/*.ts",
+		"prepublish": "tsc"
+	},
+	"dependencies": {
+		"postcss": "^7.0.32",
+		"tailwindcss": "^1.5.2"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^3.7.0",
+		"@typescript-eslint/parser": "^3.7.0",
+		"eslint": "^7.5.0",
+		"eslint-config-airbnb-base": "^14.2.0",
+		"eslint-plugin-import": "^2.22.0",
+		"typescript": "^3.9.7"
+	}
+}
