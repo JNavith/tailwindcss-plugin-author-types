@@ -11,3 +11,8 @@ TODO
 
 ## Example projects
 See my other projects TODO.
+
+
+---
+
+*Repository preview image generated with [GitHub Social Preview](https://social-preview.pqt.dev/)*
