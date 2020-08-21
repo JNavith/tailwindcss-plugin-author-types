@@ -109,8 +109,24 @@ export interface PurgeOptions {
 	defaultExtractor?: (content: string) => string[];
 }
 
+export type Purge = PurgeOptions | boolean;
+
+export interface Future {
+	removeDeprecatedGapUtilities?: boolean;
+}
+
+export interface ExperimentalOptions {
+	applyComplexClasses?: boolean;
+	defaultLineHeights?: boolean;
+	extendedFontSizeScale?: boolean;
+	extendedSpacingScale?: boolean;
+	uniformColorPalette?: boolean;
+}
+
+export type Experimental = ExperimentalOptions | "all";
+
 export interface TailwindCSSConfig {
-	purge?: PurgeOptions | boolean;
+	purge?: Purge;
 	important?: boolean | string;
 	prefix?: string;
 	separator?: string;
@@ -118,4 +134,6 @@ export interface TailwindCSSConfig {
 	corePlugins?: CorePlugins;
 	plugins?: Plugin[];
 	variants?: VariantsObject;
+	future?: Future;
+	experimental?: Experimental;
 }
