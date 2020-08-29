@@ -74,6 +74,7 @@ export type PluginTools = {
 	e: (className: string) => string;
 	postcss: PostCSS;
 	prefix: (selector: string) => string;
+	target: (plugin: string) => TargetValue;
 	theme: <Default extends ThemeValue>(path: string, defaultValue: Default) => ThemeValue | Default;
 	variants: <Default>(path: string, defaultValue: Default) => (VariantsObject[keyof VariantsObject]) | Default;
 }
@@ -125,6 +126,14 @@ export interface ExperimentalOptions {
 
 export type Experimental = ExperimentalOptions | "all";
 
+export type TargetValue = "ie11" | "relaxed";
+
+export type TargetOverridesPerPlugin = {
+	[plugin: string]: TargetValue;
+}
+
+export type Target = TargetValue | [TargetValue, TargetOverridesPerPlugin];
+
 export interface TailwindCSSConfig {
 	purge?: Purge;
 	important?: boolean | string;
@@ -136,4 +145,5 @@ export interface TailwindCSSConfig {
 	variants?: VariantsObject;
 	future?: Future;
 	experimental?: Experimental;
+	target?: Target;
 }
