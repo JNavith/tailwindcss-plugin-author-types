@@ -21,7 +21,7 @@
 	"types": "dist/index.d.ts",
 	"scripts": {
 		"lint": "eslint --fix ./src/**/*.ts",
-		"prepublish": "tsc"
+		"prepare": "tsc"
 	},
 	"dependencies": {
 		"postcss": "^7.0.32",
