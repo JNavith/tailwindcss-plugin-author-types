@@ -1,6 +1,6 @@
 {
 	"name": "@navith/tailwindcss-plugin-author-types",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"description": "Type definitions to make creating plugins for Tailwind CSS in TypeScript easier",
 	"keywords": [
 		"tailwindcss",

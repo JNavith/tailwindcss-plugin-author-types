@@ -100,9 +100,11 @@ export interface VariantsObject {
 	[utility: string]: Variants;
 }
 
+export type PurgeMode = "layers" | "conservative" | "all";
 export interface PurgeOptions {
-	enabled?: boolean;
 	content: string[];
+	enabled?: boolean;
+	mode?: PurgeMode;
 	options?: {
 		whitelist?: string[];
 		whitelistPatterns?: string[];
