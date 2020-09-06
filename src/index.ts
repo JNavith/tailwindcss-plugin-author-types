@@ -116,6 +116,7 @@ export type Purge = PurgeOptions | boolean;
 
 export interface Future {
 	removeDeprecatedGapUtilities?: boolean;
+	purgeLayersByDefault?: boolean;
 }
 
 export interface ExperimentalOptions {
