@@ -121,6 +121,7 @@ export interface Future {
 
 export interface ExperimentalOptions {
 	applyComplexClasses?: boolean;
+	darkModeVariant?: boolean;
 	defaultLineHeights?: boolean;
 	extendedFontSizeScale?: boolean;
 	extendedSpacingScale?: boolean;
