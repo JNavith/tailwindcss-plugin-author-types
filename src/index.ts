@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 import {
 	AcceptedPlugin, AtRule, AtRuleNewProps, CommentNewProps, Container, Declaration, DeclarationNewProps, Parser, PluginInitializer, Processor, Stringifier, Root, Rule, RuleNewProps,
 } from "postcss";
@@ -51,6 +52,11 @@ export interface AddVariantGeneratorOptions {
 
 export type AddVariantGenerator = (options: AddVariantGeneratorOptions) => void;
 
+export interface AddVariantOptions {
+	// eslint-disable-next-line camelcase
+	unstable_stack?: boolean;
+}
+
 export type ConfigValue = Theme | ThemeValue | CorePlugins | Plugin[] | undefined;
 
 export interface PostCSS {
@@ -69,14 +75,14 @@ export type PluginTools = {
 	addBase: (baseStyles: NestedObject) => void;
 	addComponents: (components: NestedObject, options: AddComponentsOptions) => void;
 	addUtilities: (utilities: NestedObject, options: AddUtilitiesOptions) => void;
-	addVariant: (name: string, generator: AddVariantGenerator) => void;
-	config: (path: string, defaultValue: ConfigValue) => ConfigValue;
+	addVariant: (name: string, generator: AddVariantGenerator, options?: AddVariantOptions) => void;
+	config: <Default extends ConfigValue>(path: string, defaultValue: Default) => ConfigValue;
 	e: (className: string) => string;
 	postcss: PostCSS;
 	prefix: (selector: string) => string;
 	target: (plugin: string) => TargetValue;
 	theme: <Default extends ThemeValue>(path: string, defaultValue: Default) => ThemeValue | Default;
-	variants: <Default>(path: string, defaultValue: Default) => (VariantsObject[keyof VariantsObject]) | Default;
+	variants: <Default extends Variants, Path extends keyof VariantsObject>(path: Path, defaultValue: Default) => VariantsObject[Path] | Default;
 }
 
 export type BasicPlugin = (args: PluginTools) => void;

@@ -1,6 +1,6 @@
 {
 	"name": "@navith/tailwindcss-plugin-author-types",
-	"version": "0.3.2",
+	"version": "1.8.10.0",
 	"description": "Type definitions to make creating plugins for Tailwind CSS in TypeScript easier",
 	"keywords": [
 		"tailwindcss",
@@ -25,12 +25,12 @@
 	},
 	"dependencies": {
 		"postcss": "^7.0.32",
-		"tailwindcss": "^1.8.3"
+		"tailwindcss": "^1.8.10"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.0.1",
-		"@typescript-eslint/parser": "^4.0.1",
-		"eslint": "^7.8.1",
+		"@typescript-eslint/eslint-plugin": "^4.1.1",
+		"@typescript-eslint/parser": "^4.1.1",
+		"eslint": "^7.9.0",
 		"eslint-config-airbnb-base": "^14.2.0",
 		"eslint-plugin-import": "^2.22.0",
 		"typescript": "^4.0.2"
