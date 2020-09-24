@@ -111,11 +111,12 @@ export interface PurgeOptions {
 	content: string[];
 	enabled?: boolean;
 	mode?: PurgeMode;
+	preserveHtmlElements?: boolean;
 	options?: {
+		defaultExtractor?: (content: string) => string[];
 		whitelist?: string[];
 		whitelistPatterns?: string[];
 	}
-	defaultExtractor?: (content: string) => string[];
 }
 
 export type Purge = PurgeOptions | boolean;
