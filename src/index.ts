@@ -1,6 +1,6 @@
 /* eslint-disable no-use-before-define */
 import {
-	AcceptedPlugin, AtRule, AtRuleNewProps, CommentNewProps, Container, Declaration, DeclarationNewProps, Parser, PluginInitializer, Processor, Stringifier, Root, Rule, RuleNewProps,
+	AcceptedPlugin, AtRule, AtRuleProps, CommentProps, Container, Declaration, DeclarationProps, Parser, Stringifier, Root, Rule, RuleProps,
 } from "postcss";
 
 export type ThemeValue = string | string[] | number | { [key: string]: ThemeValue } | undefined;
@@ -60,14 +60,12 @@ export interface AddVariantOptions {
 export type ConfigValue = Theme | ThemeValue | CorePlugins | Plugin[] | undefined;
 
 export interface PostCSS {
-	(plugins?: AcceptedPlugin[] | undefined): Processor;
-	plugin<T>(name: string, initializer: PluginInitializer<T>): Plugin<T>;
 	stringify: Stringifier;
 	parse: Parser;
-	comment(defaults?: CommentNewProps): Comment;
-	atRule(defaults?: AtRuleNewProps): AtRule;
-	decl(defaults?: DeclarationNewProps): Declaration;
-	rule(defaults?: RuleNewProps): Rule;
+	comment(defaults?: CommentProps): Comment;
+	atRule(defaults?: AtRuleProps): AtRule;
+	decl(defaults?: DeclarationProps): Declaration;
+	rule(defaults?: RuleProps): Rule;
 	root(defaults?: any): Root; // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 

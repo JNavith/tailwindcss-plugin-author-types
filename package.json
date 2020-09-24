@@ -24,15 +24,15 @@
 		"prepare": "tsc"
 	},
 	"dependencies": {
-		"postcss": "^7.0.32",
 		"tailwindcss": "^1.8.10"
 	},
 	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.1.1",
-		"@typescript-eslint/parser": "^4.1.1",
+		"@typescript-eslint/eslint-plugin": "^4.2.0",
+		"@typescript-eslint/parser": "^4.2.0",
 		"eslint": "^7.9.0",
 		"eslint-config-airbnb-base": "^14.2.0",
 		"eslint-plugin-import": "^2.22.0",
-		"typescript": "^4.0.2"
+		"postcss": "^8.0.9",
+		"typescript": "^4.0.3"
 	}
 }
