@@ -106,10 +106,13 @@ export interface VariantsObject {
 	[utility: string]: Variants;
 }
 
+export type PurgeContent = string[];
 export type PurgeMode = "layers" | "conservative" | "all";
+export type Layer = "base" | "components" | "utilities";
 export interface PurgeOptions {
-	content: string[];
+	content: PurgeContent;
 	enabled?: boolean;
+	layers: Layer[];
 	mode?: PurgeMode;
 	preserveHtmlElements?: boolean;
 	options?: {
@@ -119,7 +122,7 @@ export interface PurgeOptions {
 	}
 }
 
-export type Purge = PurgeOptions | boolean;
+export type Purge = PurgeOptions | PurgeContent | boolean;
 
 export interface Future {
 	removeDeprecatedGapUtilities?: boolean;
